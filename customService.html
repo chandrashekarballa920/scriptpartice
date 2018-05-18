@@ -1,0 +1,35 @@
+<html>
+    <body ng-app="myApp">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  
+        <div  ng-controller="myCtrl">
+
+        </div>
+        <div ng-controller="TodoController as todo">
+            {{TodoController.firstname}}
+        </div>
+        <div ng-controller="TextController">
+            <textarea></textarea>
+        </div>
+
+        <script>
+        var app=angular.module("myApp",[]);
+        app.service('myservice',function(){
+            var self=this;
+            this.name="Chandu";
+            this.namelength=function(){
+            return self.name.length;
+            };
+        });
+        app.controller("myCtrl",function($scope,myservice,$log){
+                $log.log(myservice.name);
+                $log.log(myservice.namelength());
+        }).controller("TodoController", function(){
+            firstname="chandrashekar";
+        })
+        app.controller("TextController", function(){
+
+        })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script>
+            var Person =function(name,age,job){
+              this.name=name;
+              this.age=age;
+              this.job=job;
+            }
+           
+            var adarsh = new Person("adarsh",26,"infosys");
+            var harsh = new Person("harsh",24,"hcl");
+            Person.prototype.gender= "male";
+          console.log(adarsh);
+    
+  
+  
+   var x   = function(j,k){
+       this.k=k;
+    this.j=j;
+
+   
+   }
+   
+   x.prototype.sum = function(l,p){
+       this.l=l;
+       this.p=p;
+       return l+p;
+    }
+ 
+ x1 = new x(3,6);
+      console.log(x1);
+    console.log(x1.sum(8,9));
+            
+(function add(a,b){
+    
+    console.log(a+b);
+    
+}(1,2));
+        </script>
+    </head>
+</html>

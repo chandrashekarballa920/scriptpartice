@@ -1,0 +1,72 @@
+<html>
+<head>
+
+</head>
+<body>
+    <script>
+        function first(value,back){
+            back(value+4,false);
+        }
+        function second(value,back){
+           back(value+4,false);
+           
+           }
+           function third(value,back){
+               back(value+4,false);
+           }
+           first(2,function(firstvalue,err){
+                if(!err){
+
+                  second(firstvalue,function(secondvalue,err){
+
+                          if(!err){
+                           third(secondvalue,function(thirdvalue,err){
+
+                               if(!err){
+                                    console.log(thirdvalue);
+                               }
+
+                              })
+                          }
+
+                     })
+                }
+                
+           });
+function one(a,b){
+           b(a+3,true);
+        }
+        function two(a,b){
+            b(a+3,true);
+        }
+        function three(a,b){
+            b(a+3,true);
+        }
+
+         one(1,function(c,d){
+              if(d){
+                  two(c,function(e,f){
+                       if(f){
+                           three(e,function(g,h){
+                                 if(h){
+                                     console.log(g)
+                                 }
+                           })
+                       }
+                  })
+              }
+         })
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

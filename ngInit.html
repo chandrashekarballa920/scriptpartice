@@ -1,0 +1,65 @@
+<html>
+<body ng-app="myApp">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="scope.js"></script>
+    <script src="root.js"></script>
+    <a href="#/!">Main</a>
+   <a href="#!first">home</a>
+   <a href="#!second">AboutUS</a>
+    
+   <div ng-view></div>
+    <div ng-controller="myCtrl">
+    <ul>
+        <li ng-repeat="country in countries">
+            
+            {{country.name}} 
+            <ul>
+         <li ng-repeat="city in country.cities">
+             {{city.name}}
+            </ul>
+        </li>
+    </ul> 
+    </div>
+     <div ng-controller="lapCtrl">
+            <ul>
+                    <li ng-repeat="lappy in laptops">
+                        
+                        {{lappy.name}} 
+                        <ul>
+                     <li ng-repeat="brand in lappy.brands">
+                         {{brand.name}}
+                        </ul>
+                    </li>
+                </ul> 
+    </div>
+    <div ng-controller="myService">
+      <table>
+          <tr>
+           <td>Name</td><td><input type="text" ng-model="input"></td><br>
+        </tr>
+        <tr>
+           <td>Name with space</td>
+             
+           <td> <input type="text" ng-model="output"></td></br>
+            </tr>
+             <tr><td>
+             <input type="button" ng-click="whitespace(input)" value="submit">
+            </td>
+            </tr>
+            {{output}}
+            </table>
+         </div>
+    <mydirective></mydirective>
+    <div ng-controller="rootController">
+        {{rootname}}
+    </div>
+    <div ng-controller="scopeController">
+            {{scopename}}
+        </div>
+        <div ng-controller="routerConfig">
+            {{change}}
+            </div>
+ 
+</body>
+</html>

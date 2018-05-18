@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>time</title>
+</head>
+<body>
+    <script>
+     var person={
+         name:"Shekhar",
+         speak:function(){
+             return "my name is "+ this.name;
+         },
+         address:{
+            House:"1-6-958",
+            street : "musheerabad",
+            city : "hyderabad",
+         }
+
+     };
+     document.write(person.speak()+"<br>");
+     document.write("my name is "+ person.name + "i live in " + person.address.House +"<br>");
+     person.address.country="india";
+     document.write(person.address.country+"<br>");
+ 
+
+ function Customer(name,Street){
+      this.street = Street;
+      this.name= name;
+      this.info = function(){
+          return "my name is " + this.name + " and i live in " + this.street;
+      }
+ }
+ var man = new Customer("chandrashekhar","musheerabad");
+ document.write(man.info()+"<br>")
+
+
+function isPalindrome(str) {
+  str = str.replace(/\W/g, '');
+  return (str == str.split('').reverse().join(''));
+}
+
+     document.write( isPalindrome("madam"));
+
+for (var j=0;j<3;j++){
+  var btn1 = document.createElement('button');
+ btn1.appendChild(document.createTextNode('Button ' + j));
+  btn1.addEventListener('submit', function(){ console.log(j); });
+ document.body.appendChild(btn1);
+}
+for(var k=0;k<3;k++){
+    var text = document.createElement("hello");
+}
+
+   var promise = Promise((resolve,reject)=>{
+       let count="bhartha ane nenu";
+       if(count){
+           
+           resolve("data is thr")
+       }
+       else{
+           
+           reject("data is not thr");
+       }
+   })
+
+   promise.then(
+       resolved => document.write(resolved),
+       error => document.write(error)
+   );
+    </script>
+    
+</body>
+
+</html>

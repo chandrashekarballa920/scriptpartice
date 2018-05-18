@@ -1,0 +1,60 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <button onclick="newwindow()">NEWWINDOW</button>
+        <button onclick="findstring()">STRING</button>
+        <button onclick="findsymbol()">SYMBOL</button>
+        <input type="text" id="name">
+        <button onclick="inc()">ADD</button>
+        <p id="ADD"></p>
+<script>
+    function inc(){
+document.getElementById("ADD").innerHTML=name.value;
+//return name;
+    }
+    // for new window
+    function newwindow(){
+      window.open().document.write("hello");
+}
+//small w to string 
+  function findstring(){
+      str="Javascript 100%$$";
+      patrn = /\w/g ;
+      word = str.match(patrn);
+      document.write(word);
+  }
+  
+//capital W for special characters
+function findsymbol(){
+    Str="MYJAVASCRIPT !@#$%^&*()"
+    pattern= /\W/g;
+    results=Str.match(pattern);
+    document.write(results);
+}
+var array =[1,2,3,4,5,6];
+function mutliarray(num){
+    return num;
+}
+
+//document.write(mutliarray(array));
+let lengths = [3, 7, 5];
+let multiple = 8;
+const scale = () => {
+  return lengths.map(el => el + multiple)
+};
+
+console.log(scale(multiple));
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
